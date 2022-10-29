@@ -40,11 +40,18 @@ function checking() {
 
 //Start of game
 //adds click events to every button
-document.querySelector("h1").addEventListener("click", function(event){
+document.addEventListener("keypress", function(event){
     console.log(event);
+    if (event.key == "a") {
         seq = [];
         userSeq = [];
         generate();
+    }
+    else{
+        title.innerHTML = "Press A Key to Start";
+        seq = [];
+        userSeq = [];
+    }
 })
 
 for (var i = 0; i <= document.querySelectorAll(".btn").length; i++) {
